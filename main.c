@@ -81,9 +81,8 @@ void juzhenchengfa(int a[], int b[], int c[], int hang, int lie)//表示c[hang][
 				//mid = mid + a[k + (i * lie)] * b[j + (k * hang)];//这里是曾经不调用函数的写法
 				mid = mid + juzhenquyuansu(a, lie, i, k) * juzhenquyuansu(b, hang, k, j);
 			}
-			c[(i * hang) + j] = mid;//这里是曾经不调用函数的写法
-			//printf("%d,", mid);
-			//juzhenxieyuansu(c, hang, i, j, mid);
+			//c[(i * hang) + j] = mid;//这里是曾经不调用函数的写法
+			juzhenxieyuansu(c, hang, i, j, mid);
 		}
 	}
 }
